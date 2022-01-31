@@ -1,0 +1,100 @@
+.overflow-h {
+    overflow: hidden;
+  }
+  .preloader {
+    background: #020202;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    transition: all 0.4s;
+    display: grid;
+    place-content: center;
+  
+    .loader {
+      width: 200px;
+      height: 200px;
+      transition: all 0.4s;
+      border-radius: 50%;
+      background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+      position: relative;
+      animation: rotate 1.2s linear infinite;
+  
+      @keyframes rotate {
+        to {
+          transform: rotate(360deg);
+          filter: hue-rotate(360deg);
+        }
+      }
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+        background: #020202;
+        border-radius: 50%;
+        z-index: 10000;
+        // width: 200px;
+        // height: 200px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+        border-radius: 50%;
+        z-index: 1;
+        filter: blur(25px);
+      }
+    }
+  
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.82rem;
+      color: #e5f403;
+      font-weight: 100;
+      animation: color 1.2s linear infinite;
+      transition: inherit;
+      font-family: Poppins, sans-serif;
+  
+      @keyframes color {
+        to {
+          filter: hue-rotate(360deg);
+        }
+      }
+    }
+  
+    &.done {
+      background: transparent;
+  
+      .loader {
+        width: 2600px;
+        height: 2600px;
+        background: none;
+  
+        &::before {
+          background: transparent;
+        }
+        &::after {
+          background: none;
+        }
+      }
+  
+      span {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+  

@@ -1,0 +1,46 @@
+.ErrorPage {
+    height: 100vh;
+    @include flexCenter(center);
+    flex-direction: column;
+  
+    .wrapper {
+      width: 18rem;
+      height: 18rem;
+      @include flexCenter(center);
+      border: 10px solid rgb(181, 255, 255);
+      border-radius: 50%;
+      user-select: none;
+      box-shadow: 0 0 25px 6px rgba(0, 255, 255, 0.603), 0 0 10px 4px #000;
+      margin-bottom: 1.6rem;
+  
+      .num {
+        font-size: 5.2rem;
+        letter-spacing: 2px;
+  
+        span {
+          font-size: 7.4rem;
+        }
+      }
+    }
+  
+    h2 {
+      font-size: 2.8rem;
+      font-weight: normal;
+    }
+  
+    .gotohome {
+      background: #21cfdf;
+      color: var(--themeBg);
+      font-weight: bold;
+      padding: 0.42rem 0.84rem;
+      margin-top: 0.6rem;
+      font-size: 1.32rem;
+      border-radius: 0.3rem;
+      transition: all 0.3s;
+  
+      &:hover {
+        background: #119099;
+      }
+    }
+  }
+  

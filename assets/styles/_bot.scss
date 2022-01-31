@@ -1,0 +1,71 @@
+.bot {
+    width: 100%;
+    height: 100vh;
+    @include flexCenter(center);
+    flex-direction: column;
+  
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    .logoPart {
+      background: url("/assets/Images/Sensor.gif");
+      width: 192px;
+      height: 192px;
+      position: relative;
+      background-size: cover;
+      border-radius: 50%;
+      background-position: center;
+    }
+    .text {
+      padding-top: 1.4rem;
+      text-align: center;
+  
+      .name {
+        font-family: poppins;
+        letter-spacing: 1.6px;
+        position: relative;
+        font-size: 2.5rem;
+        font-weight: bold;
+        padding-right: 2rem;
+        margin: 0 0.4rem;
+  
+        &::after {
+          content: "BOT";
+          position: absolute;
+          background: #505bdb;
+          // right: -2px;
+          top: 4px;
+          font-size: 0.68rem;
+          padding: 2px 5px;
+          border-radius: 0.2rem;
+        }
+      }
+    }
+    .button {
+      margin-top: 0.4rem;
+  
+      .invite {
+        background: transparent;
+        border: 3px solid #fff;
+        padding: 0.1rem 0.8rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: lighter;
+        color: #fff;
+        transition: all 0.4s;
+  
+        &:hover {
+          color: var(--themeBg);
+          font-weight: 900;
+          border-color: #505bdb;
+          background: #505bdb;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,10 @@
+.footer {
+    height: var(--footer-height);
+    @include flexCenter(center);
+    background: var(--dark);
+    font-family: Poppins, sans-serif;
+}
+.footer .footerLink {
+    color: var(--primary);
+    padding: 0 5px;
+}

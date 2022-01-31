@@ -1,0 +1,249 @@
+.project-page {
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 20px;
+    padding-top: 160px;
+  
+    .projects {
+      width: 100%;
+  
+      .heading {
+        text-align: center;
+        h1 {
+          font-size: 3.2rem;
+          font-family: poppins;
+          letter-spacing: 2px;
+        }
+        h2 {
+          font-size: 1.6rem;
+          font-family: poppins;
+          letter-spacing: 1px;
+        }
+      }
+      .card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        // max-width: 80%;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 80px;
+        padding: 0 80px;
+        justify-content: center;
+  
+        .card {
+          margin: 20px;
+          float: left;
+          font-family: poppins;
+          text-align: center;
+          max-width: 320px;
+          position: relative;
+  
+          .imgBox {
+            position: relative;
+            overflow: hidden;
+            min-width: 320px;
+            min-height: 180px;
+            background: transparent url("../Images/loading.svg") cover;
+          }
+          .imgBox::before {
+            font-size: 1.4rem;
+            font-weight: 600;
+            content: "Click To View and Get Source Code";
+            position: absolute;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.63);
+            transition: opacity 0.3s;
+            @include flexCenter(center);
+          }
+          &:hover .imgBox::before {
+            opacity: 1;
+          }
+        }
+      }
+      .loadingImg {
+        width: 220px;
+        height: 160px;
+        overflow: hidden;
+        margin: 0 auto;
+  
+        img {
+          display: block;
+          margin: 0 auto;
+          width: 182px;
+        }
+      }
+      .show-less,
+      .show-more {
+        background-color: $dark-primary;
+        padding: 0.6rem 1.2rem;
+        font-size: 1.2rem;
+        border: none;
+        outline: none;
+        border-radius: 0.25rem;
+        font-family: "Raleway";
+        margin: 0 auto;
+        margin-top: 20px;
+        cursor: pointer;
+        height: fit-content;
+        width: fit-content;
+        display: block;
+        transition: all 0.2s;
+  
+        &:hover {
+          background: #0057a3;
+        }
+      }
+    }
+  }
+  .sourcePage {
+    padding: 50px 62px;
+    padding-top: 10rem;
+    font-family: poppins;
+  
+    .pageTitle {
+      text-align: center;
+  
+      h1 {
+        font-size: 2.6rem;
+        position: relative;
+        padding-bottom: 0.6rem;
+        margin-bottom: 0.8rem;
+  
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 0;
+          height: 2px;
+          width: 278px;
+          max-width: 278px;
+          margin: 0 auto;
+          background: #fff;
+        }
+      }
+      h3 {
+        font-size: 1.6rem;
+      }
+    }
+    .thumbnail {
+      margin: 3rem 0;
+      border-bottom: 2px solid #272727;
+      padding-bottom: 2.4rem;
+  
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 800px;
+        border-radius: 0.5rem;
+      }
+    }
+  
+    .headerTitle {
+      text-align: center;
+      font-size: 1.8rem;
+      max-width: 1110px;
+      margin: auto;
+    }
+    .highlightsTitle {
+      max-width: 1110px;
+      margin: auto;
+      font-size: 2.8rem;
+    }
+    .codeHighlightTitle {
+      max-width: 1110px;
+      margin: auto;
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+    }
+    .iframeContainer {
+      max-width: 1110px;
+      margin: auto;
+  
+      .respIframe {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+      }
+    }
+  
+    .npm {
+      margin-top: 0;
+    }
+    .nm-titles {
+      max-width: 1110px;
+      margin: auto;
+    }
+    .explaination {
+      max-width: 1110px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+    .inlineCode {
+      background: #111111;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.2rem;
+      font-family: fira code;
+      display: inline;
+      font-size: 0.8em;
+  
+      .keyword {
+        font-weight: 100;
+        color: #cc99cd;
+      }
+  
+      .presWord {
+        color: #7ec699;
+      }
+      .sinFunc {
+        color: #f8c555;
+      }
+    }
+    .smGap {
+      height: 2rem;
+      width: 2px;
+    }
+    .midGap {
+      height: 3rem;
+      width: 2px;
+    }
+    .largeGap {
+      height: 6rem;
+      width: 2px;
+    }
+    .footerAppreciation {
+      max-width: 1110px;
+      margin: auto;
+      text-align: center;
+  
+      .subsribeBtn {
+        padding: 0.45rem 1.2rem;
+        padding-top: 0.5rem;
+        background: #f00;
+  
+        &:hover {
+          background: rgb(192, 0, 0);
+        }
+      }
+    }
+  }
+  .Code,
+  div.codeToolbar {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  

@@ -1,0 +1,135 @@
+@media only screen and (max-width: 1280px) {
+    .homePageFooter {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 10px;
+      flex-direction: row;
+    }
+    .homePageFooter a {
+      margin: 0 4px;
+    }
+    .hpContainer .hpImg img {
+      width: 400px;
+      height: 400px;
+    }
+    .sourcePage {
+      padding: 50px 32px;
+      padding-top: 10rem;
+      font-family: poppins;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .hpContainer {
+      flex-direction: column-reverse;
+      justify-content: center;
+      width: var(--full);
+      height: var(--f-height);
+      text-align: center;
+    }
+    .hpContainer .hpImg img {
+      width: 320px;
+      height: 320px;
+    }
+    .respIframe {
+      iframe {
+        width: 100% !important;
+        height: calc((100% / 56.25%) * 100%);
+      }
+    }
+  }
+  @media only screen and (max-width: 980px) {
+    .menu_icon {
+      display: flex !important;
+    }
+  
+    .navbar {
+      .logo {
+        font-size: 1.1rem;
+        h1 span {
+          font-size: 2.6rem;
+        }
+      }
+      .upper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+      }
+      .navList {
+        @include flexCenter(center);
+        flex-direction: column;
+        // width: 100%;
+        backdrop-filter: blur(12px);
+        // display: none;
+        position: fixed;
+        min-height: 100vh;
+        // height: 38vh;
+        top: 0;
+        // backdrop-filter: ;
+        right: -100%;
+        overflow: hidden;
+        z-index: 99999;
+        background: #1c1d1da8;
+        transition: right 0.5s;
+  
+        min-width: 280px;
+  
+        @media only screen and (max-width: 400px) {
+          width: 100%;
+          max-width: none;
+        }
+  
+        &.active {
+          right: 0;
+        }
+  
+        .navLink {
+          margin: 0 16px;
+          font-size: 2rem;
+          color: var(--d-White);
+          cursor: pointer;
+          font-family: Poppins, sans-serif;
+        }
+      }
+    }
+    .hpContainer .hpText {
+      width: unset;
+    }
+    .hpContainer .hpText h1 {
+      font-size: 2.2rem;
+    }
+    .hpContainer .hpText h3 {
+      font-size: 1.2rem;
+    }
+    .sourcePage {
+      padding: 50px 20px;
+      padding-top: 10rem;
+      font-family: poppins;
+    }
+  }
+  @media only screen and (max-width: 850px) {
+    .thumbnail img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+  }
+  @media only screen and (max-width: 580px) {
+    .project-page .projects .card-wrapper {
+      width: 100%;
+    }
+    .navbar .logo .logo-link h1 {
+      font-size: 2rem;
+  
+      span {
+        font-size: 2.6rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .navbar {
+      padding: 20px 22px;
+    }
+  }
+  
